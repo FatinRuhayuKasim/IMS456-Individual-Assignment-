@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about me</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="about me">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="IMAGE/uitm machang.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hey there! My name is Fatin Ruhayu, and I am a committed full-time student in the fourth semester of an Islamic banking degree programme. The unique principles of Islamic banking and my deep love for finance have propelled me forward in this career path. My beliefs and goals are strongly aligned with these ideals since they are based on fair and ethical methods. In my opinion, a more equitable and balanced financial system must prioritise social justice, transparency, and fairness. My unwavering dedication to my studies and the principles of Islamic Banking drives me to succeed and make a significant impact in this dynamic field. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Islamic Banking Products</span><br>Understanding various Islamic banking products and services, such as Sukuk (Islamic bonds) and Takaful (Islamic insurance).</li>
+                            <li><span>Risk Management</span><br>Can identifying and managing risks specific to Islamic financial products.</li>
+                            <li><span>Islamic Contracts</span><br>Familiarity with contracts such as Mudarabah (profit-sharing), Murabaha (cost-plus financing), and Ijarah (leasing).</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024-current</span><br>Freelancer Editing Logo</li>
+                            <li><span>2023-Diploma</span><br>Program Walkabout Program Sulam: Technical Unit</li>
+                            <li><span>2019-High School</span><br>Active Member of the Police Cadet Association</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2023-Current</span><br>Bachelor of Business Administration (Hons) Islamic Banking</li>
+                            <li><span>2020-2023</span><br>Diploma in Banking Studies</li>
+                            <li><span>2019</span><br>SPM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    
+    </script>
+</body>
+</html>
